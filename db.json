@@ -1,0 +1,19 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Breaking news",
+      "description": "This week we expect weather is extremely cold"
+    },
+    {
+      "id": 2,
+      "title": "Podcast with popular singer",
+      "description": "Today's guest is super popular singer"
+    },
+    {
+      "id": 3,
+      "title": "Some title",
+      "description": "Some description"
+    }
+  ]
+}

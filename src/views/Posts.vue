@@ -41,9 +41,9 @@ import {ref, onMounted, computed} from 'vue';
 import {usePostStore} from "@/store/post";
 const postStore = usePostStore();
 
-const isShowModal: boolean = ref(false);
-const title: string = ref('');
-const description: string = ref('');
+const isShowModal = ref<boolean>(false);
+const title = ref<string>('');
+const description = ref<string>('');
 
 onMounted(() => {
   postStore.fetchPosts();

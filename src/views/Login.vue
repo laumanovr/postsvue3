@@ -19,10 +19,10 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
+const router = useRouter();
 
-const router: object = useRouter();
-const login: string = ref('');
-const password: string = ref('');
+const login = ref<string>('');
+const password = ref<string>('');
 
 const submitForm = () => {
   if (login.value === 'admin' && password.value === '123456') {

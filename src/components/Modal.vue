@@ -19,7 +19,9 @@
 
 <script lang="ts" setup>
 import {defineEmits} from 'vue';
+
 const emit = defineEmits(['close']);
+
 const modalClose = () => {
   emit('close');
 }

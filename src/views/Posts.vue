@@ -10,7 +10,7 @@
       </tr>
       </thead>
       <tbody>
-      <tr v-for="(post, i) in postStore.allPosts" :key="post.id">
+      <tr v-for="(post, i) in allPosts" :key="post.id">
         <td>{{ i + 1 }}</td>
         <td>{{ post.title }}</td>
         <td>{{ post.description }}</td>
@@ -37,7 +37,7 @@
 <script lang="ts" setup>
 import Modal from '@/components/Modal.vue';
 import {IPost} from "@/interfaces/IPost";
-import {ref, onMounted} from 'vue';
+import {ref, onMounted, computed} from 'vue';
 import {usePostStore} from "@/store/post";
 const postStore = usePostStore();
 
@@ -48,6 +48,8 @@ const description: string = ref('');
 onMounted(() => {
   postStore.fetchPosts();
 });
+
+const allPosts = computed(() => postStore.allPosts);
 
 const showModal = () => {
   isShowModal.value = true;
